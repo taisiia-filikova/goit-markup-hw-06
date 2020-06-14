@@ -91,19 +91,14 @@
             <label class="comment-label" for="comment">Комментарий</label>
           </div>
 
-          <div class="form-field">
-            <svg class="icon-agree">
-              <use href="./img/sprite.svg#check"></use>
-            </svg>
-            <input class="form-input" type="checkbox" name="agree" id="agree">
-            <label class="form-label" for="agree">Соглашаюсь с рассылкой и принимаю <a href="">Условия
-                договора</a></label>
-
-          </div>
+          <label class="checkbox-label">
+            <input class="checkbox" type="checkbox" name="agree">Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+            <span class="checkbox-icon"></span>
+          </label>
 
           <button class="button-modal" type="submit">Отправить</button>
         </form>
-
         <button type="button" class="close" data-modal-close>
           <svg class="icon-close">
             <use href="./img/sprite.svg#close"></use>
@@ -111,6 +106,8 @@
         </button>
       </div>
     </div>
+
+
 
     <!--Advantages-->
     <section class="section container">

@@ -932,16 +932,6 @@ section {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-
-.modal-title {
-  font-weight: 700px;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: var(--title-text-color);
-  margin-top: 0;
-  margin-bottom: 30px;
-}
 .close {
   position: absolute;
   top: -9px;
@@ -964,6 +954,16 @@ section {
   width: 18px;
   height: 18px;
   fill: #000000;
+}
+
+.modal-title {
+  font-weight: 700px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /* Form */
@@ -1028,11 +1028,6 @@ section {
   resize: none;
 }
 
-.form-field a {
-  color: var(--accent-color);
-  text-decoration-line: underline;
-}
-
 /* Не работает бордер у инпута при фокусе */
 .form-input:focus,
 .form-texterea:focus {
@@ -1045,9 +1040,9 @@ section {
   transform: translate(-26px, -40px);
 }
 
-.form-texterea:focus + .comment-label{
-   color: var(--accent-color);
-   transform: translateY(-33px);
+.form-texterea:focus + .comment-label {
+  color: var(--accent-color);
+  transform: translateY(-33px);
 }
 
 .icon-form {
@@ -1063,14 +1058,6 @@ section {
 
 .form-input:focus ~ .icon-form {
   fill: var(--accent-color);
-}
-
-.icon-agree {
-  /* width: 15px;
-  height: 15px; */
-  m
-  width: 5px;
-  height: 5px;
 }
 
 .button-modal {
@@ -1092,4 +1079,47 @@ section {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+}
+
+/* .checkbox {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+} */
+
+.checkbox-label {
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 30px;
+
+  color: var(--paragraph-colour);
+}
+
+.checkbox-label a {
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}
+
+/* .checkbox-icon {
+  display: block;
+  margin-left: 8px;
+
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-white-color);
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+} */
+
+.checkbox:checked + .checkbox-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+
+  background-image: url(./);
 }
