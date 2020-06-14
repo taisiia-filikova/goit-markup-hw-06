@@ -550,8 +550,11 @@ section {
 }
 
 .footer-contacts {
+  margin-right: 69px;
+
   background-color: var(--footer-bgc);
   color: var(--footer-text-color);
+  margin-left: 0;
 }
 
 .footer-contacts > a {
@@ -593,7 +596,7 @@ section {
 /* Social Networks box */
 
 .follow-us {
-  margin-left: 179px;
+  margin-right: 94px;
 }
 
 .social-networks {
@@ -653,13 +656,29 @@ section {
   display: flex;
 }
 
-.e-mail {
+.e-mail-label {
   color: var(--footer-text-color);
 
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.25;
 }
+
+.email-input {
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  background-color: var(--footer-bgc);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+}
+
 /* .footer input {
   display: inline-block;
   border-radius: 4px;
@@ -667,11 +686,11 @@ section {
 
 .button-footer {
   display: flex;
+  border: none;
   border-radius: 4px;
   min-width: 200px;
   min-height: 50px;
   padding: 10px 32px;
-  margin-left: 12px;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
