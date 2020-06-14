@@ -921,7 +921,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--timing-function);
 
   width: 528px;
   height: 581px;
@@ -971,17 +971,46 @@ section {
   display: flex;
   flex-direction: column;
   width: 448px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .form-field {
   position: relative;
-  width: 100%;
-  outline: 1px tomato;
+  margin-bottom: 28px;
+
+  /* outline: 1px solid tomato; */
 }
 
 .form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--paragraph-colour);
+  transition: transform 250ms var(--timing-function);
+}
+
+.form-input {
+  display: inline-block;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.comment-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
   font-weight: 400px;
   font-size: 14px;
   line-height: 1.14;
@@ -990,10 +1019,10 @@ section {
   color: var(--paragraph-colour);
 }
 
-.form-input,
-textarea {
+.form-texterea {
   display: inline-block;
   width: 448px;
+  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -1004,24 +1033,44 @@ textarea {
   text-decoration-line: underline;
 }
 
+/* Не работает бордер у инпута при фокусе */
 .form-input:focus,
-textarea:focus {
+.form-texterea:focus {
   border: 1px solid var(--accent-color);
 }
 
-/* Не работает бордер у инпута при фокусе */
-.form-input:focus + .form-label {
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   color: var(--accent-color);
+  transform: translate(-26px, -40px);
+}
+
+.form-texterea:focus + .comment-label{
+   color: var(--accent-color);
+   transform: translateY(-33px);
 }
 
 .icon-form {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
   width: 18px;
   height: 18px;
   fill: var(--title-text-color);
 }
+
+.form-input:focus ~ .icon-form {
+  fill: var(--accent-color);
+}
+
 .icon-agree {
-  width: 15px;
-  height: 15px;
+  /* width: 15px;
+  height: 15px; */
+  m
+  width: 5px;
+  height: 5px;
 }
 
 .button-modal {
