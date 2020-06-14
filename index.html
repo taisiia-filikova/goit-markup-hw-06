@@ -58,52 +58,57 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal">
-      <form action="">
-        <div class="form-field">
-          <svg>
-            <use href="./img/sprite.svg#person-modal"></use>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form action="" class="form">
+          <div class="form-field">
+            <svg class="icon-form">
+              <use href="./img/sprite.svg#person-modal"></use>
+            </svg>
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" autofocus autocomplete>
+          </div>
+
+          <div class="form-field">
+            <svg class="icon-form">
+              <use href="./img/sprite.svg#phone-modal"></use>
+            </svg>
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" autocomplete>
+          </div>
+
+          <div class="form-field">
+            <svg class="icon-form">
+              <use href="./img/sprite.svg#email-modal"></use>
+            </svg>
+            <label for="mail">Почта</label>
+            <input type="email" name="mail" id="mail" autocomplete>
+          </div>
+
+          <div class="form-field">
+            <label for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" rows="10" placeholder="Комментарий"></textarea>
+          </div>
+
+          <div class="form-field">
+            <svg class="icon-agree">
+              <use href="./img/sprite.svg#check"></use>
+            </svg>
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+
+          </div>
+
+          <button class="button-modal" type="submit">Отправить</button>
+        </form>
+
+        <button type="button" class="close" data-modal-close>
+          <svg class="icon-close">
+            <use href="./img/sprite.svg#close"></use>
           </svg>
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name" autofocus autocomplete>
-        </div>
-
-        <div class="form-field">
-          <svg>
-            <use href="./img/sprite.svg#phone-modal"></use>
-          </svg>
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel" autocomplete>
-        </div>
-
-        <div class="form-field">
-          <svg>
-            <use href="./img/sprite.svg#email-modal"></use>
-          </svg>
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" autocomplete>
-        </div>
-
-        <div class="form-field">
-          <label for="comment">Комментарий</label>
-          <textarea name="comment" id="comment" rows="10" placeholder="Комментарий"></textarea>
-        </div>
-
-        <div class="form-field">
-          <svg>
-            <use href="./img/sprite.svg#check"></use>
-          </svg>
-          <input type="checkbox" name="agree" id="agree">
-          <label for="agree">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-
-        </div>
-
-        <button type="submit">Отправить</button>
-      </form>
-
-      <svg class="close" data-modal-close>
-        <use href="./img/sprite.svg#close"></use>
-      </svg>
+        </button>
+      </div>
     </div>
 
     <!--Advantages-->
