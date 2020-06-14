@@ -970,6 +970,48 @@ section {
 .form {
   display: flex;
   flex-direction: column;
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+  outline: 1px tomato;
+}
+
+.form-label {
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--paragraph-colour);
+}
+
+.form-input,
+textarea {
+  display: inline-block;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.form-field a {
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}
+
+.form-input:focus,
+textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* Не работает бордер у инпута при фокусе */
+.form-input:focus + .form-label {
+  color: var(--accent-color);
 }
 
 .icon-form {
