@@ -910,9 +910,11 @@ section {
 /* .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-.backdrop.is-hidden .modal {
+/* Хотела анимировать, чтоб модалка при нажатии кнопки из ниоткуда выростала, но что-то пошло не так */
+
+/* .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 } */
 
@@ -1028,7 +1030,7 @@ section {
   resize: none;
 }
 
-/* Не работает бордер у инпута при фокусе */
+/* Не работает бордер у инпута при фокусе (точнее работает, но спрятан за черной рамкой)*/
 .form-input:focus,
 .form-texterea:focus {
   border: 1px solid var(--accent-color);
@@ -1081,6 +1083,8 @@ section {
   letter-spacing: 0.06em;
 }
 
+/* Checkbox */
+
 /* .checkbox {
   position: absolute;
   appearance: none;
@@ -1088,7 +1092,23 @@ section {
   -moz-appearance: none;
 } */
 
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .checkbox-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   font-weight: 400px;
   font-size: 14px;
   line-height: 1.71;
@@ -1097,29 +1117,34 @@ section {
   color: var(--paragraph-colour);
 }
 
+.checkbox-label p {
+  margin: 0;
+}
+
 .checkbox-label a {
   color: var(--accent-color);
   text-decoration-line: underline;
 }
 
-/* .checkbox-icon {
+.checkbox-icon {
   display: block;
-  margin-left: 8px;
-
   width: 15px;
   height: 15px;
+  margin-left: 0;
+  margin-right: 8px;
+
   background-color: var(--primary-white-color);
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-} */
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .checkbox:checked + .checkbox-icon {
-  display: block;
-  width: 15px;
-  height: 15px;
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
   border-radius: 2px;
-
-  background-image: url(./);
+  background-origin: border-box;
+  background-image: url(../img/check.svg);
+  background-size: contain;
 }
