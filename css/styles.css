@@ -652,7 +652,7 @@ section {
   margin-left: auto;
 }
 
-.form {
+.footer-form {
   display: flex;
 }
 
@@ -673,7 +673,9 @@ section {
   margin-right: 12px;
 
   background-color: var(--footer-bgc);
+  color: var(--footer-text-color);
 
+  outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
@@ -686,10 +688,12 @@ section {
 
 .button-footer {
   display: flex;
+  align-items: center;
+
   border: none;
   border-radius: 4px;
-  min-width: 200px;
-  min-height: 50px;
+  width: 200px;
+  height: 50px;
   padding: 10px 32px;
 
   color: var(--primary-white-color);
@@ -700,6 +704,8 @@ section {
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
+
+  cursor: pointer;
 }
 
 .plane {
@@ -907,16 +913,13 @@ section {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-} */
+  visibility: hidden;
 
-/* Хотела анимировать, чтоб модалка при нажатии кнопки из ниоткуда выростала, но что-то пошло не так */
-
-/* .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-} */
+}
 
 .modal {
   position: absolute;
@@ -936,15 +939,19 @@ section {
 }
 .close {
   position: absolute;
+
   top: -9px;
   right: -9px;
   width: 30px;
   height: 30px;
+
   background-color: var(--primary-white-color);
   border-radius: 50%;
   border: none;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
 }
 
 .icon-close {
@@ -1006,6 +1013,8 @@ section {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  padding-left: 42px;
 }
 
 .comment-label {
@@ -1034,6 +1043,7 @@ section {
 .form-input:focus,
 .form-texterea:focus {
   border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .form-input:focus + .form-label,
@@ -1081,6 +1091,8 @@ section {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
 }
 
 /* Checkbox */
